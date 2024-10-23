@@ -7,7 +7,7 @@ output_file="output"
 > "$output_file"
 
 # List of AWS profiles (configured accounts)
-profiles=("763772356654" "593533515596" "683966224336")
+profiles=("763772343566" )
 regions=("us-east-1" "us-east-2" "us-west-1" "us-west-2")
 
 get_volumes() {
