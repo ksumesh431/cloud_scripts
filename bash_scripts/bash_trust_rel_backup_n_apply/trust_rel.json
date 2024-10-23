@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}

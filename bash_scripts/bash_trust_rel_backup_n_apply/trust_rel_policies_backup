@@ -1,0 +1,2120 @@
+
+Account Number : 148656707384 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 170895530469 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 259987506714 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 237840073416 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 381188050020 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 509704156812 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 661664821915 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 657681547968 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 261390753486 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 295494579406 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 591212346577 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 666717213534 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 781300432669 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 867907917890 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 814185912447 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 116300961321 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 160513558103 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 134284705459 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 128396351922 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 225704776140 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 220632944928 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 230999311295 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 246782364422 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 176309687584 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 263975693283 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 266446420302 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 215088829050 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 216191278443 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 172022008291 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 284929069175 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 171749804602 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 395392661826 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 369556419013 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 373275528530 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 288053755200 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 301465073021 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 391767297048 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 394420708252 ###############################################
+# Old trust relationship policy:
+
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 288276583063 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 331147279893 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 404738986417 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 367276040723 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 312308075865 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 532781312430 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 432062541160 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 452460757919 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 470061707647 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 501633652046 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 565212748888 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 458970401082 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 520345425786 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 422691248530 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 562557054605 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 408088146858 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 447378552641 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 447391880994 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 554938577517 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 416029571919 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 445516054113 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 511118448992 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 721615699755 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 566618788984 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 655091057032 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 594504648029 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 573678217237 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 630034004811 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 633759717959 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 632294257753 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 664353777389 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 688162211510 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 768545751310 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 898321658754 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 848557332205 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 869562651934 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 928734777579 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 744028557743 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 846016091089 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 883080883690 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 741547339323 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 804596621126 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 897561502983 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 863095730804 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 819398422556 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 793338487117 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 838678933722 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 943175875100 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 975746488271 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/service-role/Get_email_for_Ecs_service_count-role-91rmz68r"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 980758408536 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 485312260899 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 044647457783 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 023061712707 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount",
+                    "arn:aws:iam::575672604269:role/envPage"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 041436144223 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 574828499418 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ],
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 744382122683 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+                "AWS": [
+                    "arn:aws:iam::575672604269:role/envPage",
+                    "arn:aws:iam::381203884180:role/snowflake_assume_role_for_multiaccount"
+                ]
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 819330636272 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 062155287677 ###############################################
+# Old trust relationship policy:
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::575672604269:role/envPage",
+                "Service": "ec2.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+
+##########################################################################
+##########################################################################
+
+
+##########################################################################
+##########################################################################
+
+
+Account Number : 394420708252 ###############################################
+# Old trust relationship policy:
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"Service": "ec2.amazonaws.com"
+			},
+			"Action": "sts:AssumeRole"
+		}
+	]
+}
+
+##########################################################################
+##########################################################################

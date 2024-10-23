@@ -1,0 +1,261 @@
+---
+- name: Setup all hosts with kubernetes tools
+  hosts: masters:workers
+  gather_facts: false
+  become: yes # Apply become for all tasks
+  tasks:
+    - name: Check current hostname
+      command: hostname
+      register: current_hostname
+
+    - name: Set a hostname
+      ansible.builtin.hostname:
+        name: "{{ node_hostname }}"
+      when: current_hostname.stdout != node_hostname
+
+    - name: Insert/Update configuration using a local file and validate it
+      ansible.builtin.blockinfile:
+        block: "{{ lookup('file', 'hosts') }}"
+        path: /etc/hosts
+        backup: yes
+
+    - name: Install required packages for Docker repository
+      apt:
+        name:
+          - ca-certificates
+          - curl
+          - apt-transport-https
+          - gpg
+        state: present
+        update_cache: yes
+
+    - name: Disable swap
+      command: swapoff -a
+
+    - name: Enable IPv4 packet forwarding
+      copy:
+        dest: /etc/sysctl.d/k8s.conf
+        content: |
+          net.ipv4.ip_forward = 1
+      notify: Reload sysctl
+
+    - name: Reload sysctl to apply changes
+      command: sysctl --system
+      notify: Reload sysctl
+
+    # Kubernetes repos
+    - name: Ensure /etc/apt/keyrings directory exists
+      file:
+        path: /etc/apt/keyrings
+        state: directory
+        mode: '0755'
+    - name: Download and install Kubernetes signing key
+      ansible.builtin.shell: |
+        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+      args:
+        creates: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    - name: Add Kubernetes apt repository
+      copy:
+        dest: /etc/apt/sources.list.d/kubernetes.list
+        content: 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /'
+        force: true # Ensures that this overwrites any existing kubernetes.list
+
+    # Docker repos
+    - name: Download Docker's official GPG key
+      ansible.builtin.get_url:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        dest: /etc/apt/keyrings/docker.asc
+        mode: '0644'
+        owner: root
+        group: root
+
+    - name: Ensure Docker GPG key has appropriate permissions
+      file:
+        path: /etc/apt/keyrings/docker.asc
+        mode: '0644'
+        owner: root
+        group: root
+
+    - name: Get lsb_release codename
+      command: lsb_release -c -s
+      register: lsb_release_output
+
+    - name: Add Docker repository to Apt sources
+      command: >
+        bash -c "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu {{ lsb_release_output.stdout }} stable' > /etc/apt/sources.list.d/docker.list"
+
+      args:
+        creates: /etc/apt/sources.list.d/docker.list # Ensure the command runs only if the file doesn't exist
+
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Install containerd.io
+      apt:
+        name: containerd.io
+        state: present
+
+    - name: Generate default Containerd configuration
+      command: containerd config default
+      register: containerd_config
+      changed_when: true # Mark this task as changed to create the file
+
+    - name: Write Containerd configuration to /etc/containerd/config.toml
+      copy:
+        content: "{{ containerd_config.stdout }}"
+        dest: /etc/containerd/config.toml
+        mode: '0644'
+        owner: root
+        group: root
+
+    - name: Set SystemdCgroup to true in Containerd configuration
+      lineinfile:
+        path: /etc/containerd/config.toml
+        regexp: '^\s*SystemdCgroup\s*=\s*false'
+        line: 'SystemdCgroup = true'
+        backup: yes # Creates a backup of the original file
+
+    - name: Restart Containerd service
+      systemd:
+        name: containerd
+        state: restarted
+
+    - name: Install Kubernetes components (kubelet, kubeadm, kubectl)
+      apt:
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+        state: present
+        update_cache: yes
+
+    - name: Hold Kubernetes components at their current versions
+      command: apt-mark hold kubelet kubeadm kubectl
+
+    - name: Check if systemctl status kubelet works
+      command: systemctl status kubelet
+      register: kubelet_status
+      ignore_errors: true
+      until: kubelet_status.stderr.find("Unit kubelet.service could not be found.") == -1
+
+    - name: Proceed to the next steps if kubelet service is available
+      debug:
+        msg: "Kubelet service found or not in the 'could not be found' state."
+
+    - name: Print kubelet status details
+      debug:
+        var: kubelet_status
+
+  handlers:
+    - name: Reload sysctl
+      command: sysctl --system
+
+
+
+- hosts: master1
+  become: yes
+  tasks:
+    - name: Check if kubeadm has already initialized the cluster (on master1)
+      stat:
+        path: /etc/kubernetes/admin.conf
+      register: kubeadm_config
+
+    - name: Initialize kubeadm on master1 if not already initialized
+      shell: |
+        sudo kubeadm init \
+        --control-plane-endpoint "{{ hostvars[inventory_hostname].load_balancer_dns }}:6443" \
+        --upload-certs --pod-network-cidr=10.244.0.0/16
+      when: not kubeadm_config.stat.exists
+      changed_when: not kubeadm_config.stat.exists
+
+    - name: Create ~/.kube directory
+      ansible.builtin.file:
+        path: "{{ ansible_env.HOME }}/.kube"
+        state: directory
+        mode: "0755"
+      when: kubeadm_config.stat.exists or not kubeadm_config.stat.exists # Run whether init was done or cluster already initialized
+
+    - name: Copy kubeconfig file to the user's .kube directory
+      copy:
+        src: /etc/kubernetes/admin.conf
+        dest: "{{ ansible_env.HOME }}/.kube/config"
+        owner: "{{ ansible_user }}"
+        mode: '0644'
+        remote_src: yes
+      when: kubeadm_config.stat.exists or not kubeadm_config.stat.exists # Run regardless of initialization status
+
+    - name: Set correct permissions on kubeconfig file
+      shell: sudo chown $(id -u):$(id -g) $HOME/.kube/config
+      when: kubeadm_config.stat.exists or not kubeadm_config.stat.exists # Ensure permissions are always set
+
+    - name: Install Weave CNI
+      ansible.builtin.shell: kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.31/net.yaml
+      when: kubeadm_config.stat.exists or not kubeadm_config.stat.exists # Ensure the network plugin is installed
+
+    - name: Copy kubeconfig file locally #(optional: if you need it locally on your control machine)
+      ansible.builtin.fetch:
+        src: "{{ ansible_env.HOME }}/.kube/config"
+        dest: ~/.kube/
+        flat: yes
+      when: kubeadm_config.stat.exists or not kubeadm_config.stat.exists # Always copy locally
+
+    - name: Upload the certificates and get the cert key
+      shell: |
+        sudo kubeadm init phase upload-certs --upload-certs
+      register: cert_key
+
+    - name: Extract the certificate key from the output
+      set_fact:
+        certificate_key: "{{ cert_key.stdout | regex_search('([0-9a-f]{64})') }}"
+
+    - name: Generate join token for worker nodes
+      shell: sudo kubeadm token create --print-join-command
+      register: join_command
+
+    - name: Save the master join command as a fact (with control plane flags)
+      set_fact:
+        master_join_command: "{{ join_command.stdout }} --control-plane --certificate-key {{ certificate_key }}"
+
+    - name: Save the worker join command as a fact (without control plane flags)
+      set_fact:
+        worker_join_command: "{{ join_command.stdout }}"
+
+
+
+- hosts: masters
+  become: yes
+  tasks:
+    - name: Check if this is master1 (skip it for master1)
+      set_fact:
+        is_master1: "{{ inventory_hostname == 'master1' }}"
+
+    - name: Check if kubeadm has already initialized the cluster (on other masters)
+      stat:
+        path: /etc/kubernetes/admin.conf
+      register: kubeadm_config
+      when: not is_master1
+
+    - name: Join other masters to the control plane if not already initialized
+      shell: "{{ hostvars['master1'].master_join_command }}"
+      when: not (kubeadm_config.stat.exists | default(false)) and not is_master1
+      changed_when: not (kubeadm_config.stat.exists | default(false))
+
+
+
+
+- hosts: workers
+  become: yes
+  tasks:
+    - name: Check if kubelet configuration file exists (node already joined)
+      stat:
+        path: /etc/kubernetes/kubelet.conf
+      register: kubelet_config
+
+    - name: Join worker nodes to the cluster if not already joined
+      shell: "{{ hostvars['master1'].worker_join_command }}"
+      when: not kubelet_config.stat.exists
+      changed_when: not kubelet_config.stat.exists
+
+
+

@@ -1,0 +1,145 @@
+###################################
+###################################
+
+Running AWS CLI commands for profile: 000699977340
+Listing EC2 instances with public facing ips in region: us-east-1 
+
+
+Finished listing EC2 instances in region: us-east-1 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-east-2 
+
+Running for Instance ID: i-0b926eb1ff23fe37e
+Running of SG Loop for Security Group ID: sg-0d431a236d31a0b6b
+
+-----------------------------------
+Account Name: saasioplayground
+Account ID: 000699977340
+Instance ID: i-0b926eb1ff23fe37e
+Region: us-east-2
+Public ip: "13.59.173.3"
+Security Group: sg-0d431a236d31a0b6b
+cidr0: 0.0.0.0/0, port0: 22
+-----------------------------------
+
+ ---------------------- INSTANCE SEPARATOR ----------------------
+Running for Instance ID: i-04a23b3fec5e8bec3
+Running of SG Loop for Security Group ID: sg-03a4f69034d5df12b
+
+-----------------------------------
+Account Name: saasioplayground
+Account ID: 000699977340
+Instance ID: i-04a23b3fec5e8bec3
+Region: us-east-2
+Public ip: "3.133.19.234"
+Security Group: sg-03a4f69034d5df12b
+cidr0: 0.0.0.0/0, port0: 30080
+cidr1: 0.0.0.0/0, port1: 80
+cidr2: 172.31.7.210/32, port2: 24224
+cidr3: 49.43.97.231/32, port3: null
+cidr4: 0.0.0.0/0, port4: 22
+cidr5: 71.114.44.106/32, port5: 8002
+cidr6: 71.114.44.106/32, port6: -1
+cidr7: 0.0.0.0/0, port7: 443
+-----------------------------------
+
+ ---------------------- INSTANCE SEPARATOR ----------------------
+Running for Instance ID: i-0c52efa07b6f16afa
+Running of SG Loop for Security Group ID: sg-0c029bfdd514736c6
+
+-----------------------------------
+Account Name: saasioplayground
+Account ID: 000699977340
+Instance ID: i-0c52efa07b6f16afa
+Region: us-east-2
+Public ip: "18.191.207.30"
+Security Group: sg-0c029bfdd514736c6
+cidr0: 172.31.7.210/32, port0: 24224
+cidr1: 71.114.44.106/32, port1: 8080
+cidr2: 0.0.0.0/0, port2: null
+cidr3: 71.114.44.106/32, port3: 22
+cidr4: 49.43.97.231/32, port4: 2049
+cidr5: 0.0.0.0/0, port5: 
+cidr6: 172.31.2.172/32, port6: 
+-----------------------------------
+
+ ---------------------- INSTANCE SEPARATOR ----------------------
+
+Finished listing EC2 instances in region: us-east-2 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-west-1 
+
+
+Finished listing EC2 instances in region: us-west-1 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-west-2 
+
+
+Finished listing EC2 instances in region: us-west-2 
+-------------------------------------------------------
+Finished running AWS CLI commands for profile: 000699977340
+
+###################################
+###################################
+
+###################################
+###################################
+
+Running AWS CLI commands for profile: 633759717959
+Listing EC2 instances with public facing ips in region: us-east-1 
+
+
+Finished listing EC2 instances in region: us-east-1 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-east-2 
+
+Running for Instance ID: i-05bbf247b5b52047b
+Running of SG Loop for Security Group ID: sg-046f6a16818dd0ae1
+
+-----------------------------------
+Account Name: erp-aldine
+Account ID: 633759717959
+Instance ID: i-05bbf247b5b52047b
+Region: us-east-2
+Public ip: "3.138.242.112"
+Security Group: sg-046f6a16818dd0ae1
+cidr0: 18.188.177.124/32, port0: null
+cidr1: 192.168.180.0/22, port1: 
+cidr2: 3.20.27.105/32, port2: 
+-----------------------------------
+
+ ---------------------- INSTANCE SEPARATOR ----------------------
+Running for Instance ID: i-025f0fd3579be9156
+Running of SG Loop for Security Group ID: sg-046f6a16818dd0ae1
+
+-----------------------------------
+Account Name: erp-aldine
+Account ID: 633759717959
+Instance ID: i-025f0fd3579be9156
+Region: us-east-2
+Public ip: "3.17.216.171"
+Security Group: sg-046f6a16818dd0ae1
+cidr0: 18.188.177.124/32, port0: null
+cidr1: 192.168.180.0/22, port1: 
+cidr2: 3.20.27.105/32, port2: 
+-----------------------------------
+
+ ---------------------- INSTANCE SEPARATOR ----------------------
+
+Finished listing EC2 instances in region: us-east-2 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-west-1 
+
+
+Finished listing EC2 instances in region: us-west-1 
+-------------------------------------------------------
+Listing EC2 instances with public facing ips in region: us-west-2 
+
+
+Finished listing EC2 instances in region: us-west-2 
+-------------------------------------------------------
+Finished running AWS CLI commands for profile: 633759717959
+
+###################################
+###################################
+
