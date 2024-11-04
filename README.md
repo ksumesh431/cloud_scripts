@@ -111,3 +111,71 @@ A collection of Bash scripts for automating tasks related to AWS and other utili
         2.5 Customization: Easily add more stocks by modifying URLs and cell mappings.
 
 --- 
+
+
+#### 3. Bash R53 Records Deletion
+
+        3.1 Purpose: Scripts to identify, update, and delete A and TXT DNS records in an AWS Route53 hosted zone.
+
+        3.2 Prerequisites:
+        - AWS account with Route53 access.
+        - AWS CLI and jq installed.
+
+        3.3 Setup:
+        - Clone the repo and update the `HOSTED_ZONE_ID` in the scripts.
+        - Ensure scripts have execute permissions.
+
+        3.4 Usage:
+        - Identify records: Run `./script1.sh`.
+        - Delete records: Run `./script2.sh`.
+
+        3.5 Scripts:
+        - `script1.sh`: Lists DNS records to delete.
+        - `script2.sh`: Updates and deletes the identified records.
+
+
+---
+
+#### 4. Bash Trust Relationship Backup and Apply
+
+        4.1 Purpose: Automates the management of AWS IAM roles by checking and updating the trust relationship and policies across multiple accounts.
+
+        4.2 Prerequisites:
+        - AWS CLI installed and configured with necessary profiles.
+        - JSON files: `list_ecs_policy.json` and `trust_rel.json` in the working directory.
+        - Existing IAM role (`EC2_servers`) in target accounts.
+
+        4.3 Usage:
+        - Modify the policy files to include your desired settings.
+        - Run the script:
+            ```bash
+            chmod +x script.sh
+            ./script.sh
+            ```
+
+        4.4 Workflow:
+        - Checks if `list_ecs_policy` is attached to the IAM role.
+        - Backs up current trust relationship policy.
+        - Updates the trust relationship policy with a new one specified in `trust_rel.json`.
+
+        4.5 Customization:
+        - Change `ROLE_NAME` for different IAM roles.
+        - Modify the `profiles` array to target specific AWS accounts.
+
+
+---
+
+#### 5. Bash Unencrypted Volumes
+
+        5.1 Purpose: Identifies unencrypted EC2 volumes across multiple AWS accounts and regions, reporting details to a CSV file.
+
+        5.2 Key Features:
+        - Loops through specified AWS profiles and regions.
+        - Retrieves details of unencrypted volumes: ID, name, attached instance name, availability zone, and size.
+        - Outputs data to a CSV file.
+
+        5.3 Usage:
+        - Configure `profiles` and `regions` arrays in the script.
+        - Run the script after making it executable.
+
+        5.4 Output: Generates a CSV file containing account name, volume name, volume ID, instance name, availability zone, and volume size (GB).
