@@ -40,7 +40,7 @@ A collection of Ansible playbooks for various server setups and cloud environmen
 <br>
 
 
----
+
 
 # Architectural Usecases
 
