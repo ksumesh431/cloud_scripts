@@ -101,10 +101,3 @@ ENV=<workspace_name> make <command>
    ```bash
    ENV=rishabh make destroy
    ```
-
-## Conclusion
-
-This setup allows for streamlined management of AWS resources using Terraform. By utilizing workspaces and the Makefile, you can efficiently manage multiple environments with ease.
-
-For more information on Terraform, refer to the [Terraform documentation](https://www.terraform.io/docs/index.html).
-``
