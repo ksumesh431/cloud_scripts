@@ -8,29 +8,29 @@ A collection of Ansible playbooks for various server setups and cloud environmen
 
 #### **1. Ansible Windows IIS**
 
-1.1 **Purpose**: Automates IIS setup on a Windows server hosted on AWS, setting up a website with a default HTML page.
+        1.1 **Purpose**: Automates IIS setup on a Windows server hosted on AWS, setting up a website with a default HTML page.
 
-1.2 **Structure**:
-   - `tasks/main.yml`: Core playbook for IIS configuration.
-   - `templates/index.html.j2`: HTML template for website content.
+        1.2 **Structure**:
+        - `tasks/main.yml`: Core playbook for IIS configuration.
+        - `templates/index.html.j2`: HTML template for website content.
 
-1.3 **Usage**:
-   - Configure `hosts.ini` with target server details.
-   - Run playbook: `ansible-playbook -i hosts.ini roles/sample-site/tasks/main.yml`.
-   - Access site via `http://<server_ip>`.
+        1.3 **Usage**:
+        - Configure `hosts.ini` with target server details.
+        - Run playbook: `ansible-playbook -i hosts.ini roles/sample-site/tasks/main.yml`.
+        - Access site via `http://<server_ip>`.
 
 ---
 
 #### **2. Ansible AWS Automation**
 
-2.1 **Purpose**: Automates essential AWS environment management tasks across 400+ accounts, such as credential setup, EFS/S3 mounting, and log handling.
+        2.1 **Purpose**: Automates essential AWS environment management tasks across 400+ accounts, such as credential setup, EFS/S3 mounting, and log handling.
 
-2.2 **Features**:
-   - AWS credential management across multiple accounts.
-   - Mounting EFS volumes and S3 buckets as NFS.
-   - Automated CRON jobs for centralized log management.
+        2.2 **Features**:
+        - AWS credential management across multiple accounts.
+        - Mounting EFS volumes and S3 buckets as NFS.
+        - Automated CRON jobs for centralized log management.
 
-2.3 **Usage**: Use these playbooks to streamline provisioning and maintenance tasks, enhancing security and operational efficiency in both dev and prod environments.
+        2.3 **Usage**: Use these playbooks to streamline provisioning and maintenance tasks, enhancing security and operational efficiency in both dev and prod environments.
 
 
 
