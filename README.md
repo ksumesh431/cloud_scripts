@@ -32,13 +32,11 @@ A collection of Ansible playbooks for various server setups and cloud environmen
 
 2.3 **Usage**: Use these playbooks to streamline provisioning and maintenance tasks, enhancing security and operational efficiency in both dev and prod environments.
 
----
 
 
 <br>
 <br>
-<br>
-<br>
+
 
 ---
 <br>
