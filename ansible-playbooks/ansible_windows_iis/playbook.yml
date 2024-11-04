@@ -1,0 +1,8 @@
+# playbook.yml
+---
+- name: Install IIS on Windows Server and setup a sample site
+  hosts: windows 
+
+  roles:
+    - install-iis
+    - sample-site

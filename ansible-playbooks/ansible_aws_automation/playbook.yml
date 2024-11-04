@@ -1,0 +1,175 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  vars:
+   env: pd
+   regions:
+      - us-east-2
+   parameter_name: EFS
+  tasks:
+    - name: Extract hostname
+      set_fact:
+        hostname: "{{ inventory_hostname | regex_replace('-gw-[abc]$', '') }}"
+
+    - name: Construct new hostname
+      set_fact:
+        stack_name: "ecs-{{ hostname }}-{{ env }}"
+
+    - name: Construct s3 bucket name
+      set_fact:
+        bucket_name: "{{ hostname }}-{{ env }}-log-archive"
+
+    - name: Display new hostname
+      debug:
+        var: stack_name
+
+    - name: Display s3 bucket name
+      debug:
+        var: bucket_name
+
+    - name: Check if directory exists
+      stat:
+        path: ~/.aws
+      register: aws_dir
+
+    - name: Create aws directory if it doesn't exist
+      file:
+        path: ~/.aws
+        state: directory
+      when: not aws_dir.stat.exists
+
+    - name: COPY AWS CONFIG file
+      copy:
+        src: ~/.aws/config
+        dest: ~/.aws/config
+
+    - name: Run command and capture output
+      shell: aws sts get-caller-identity
+      register: command_output
+
+    - name: Print command output
+      debug:
+        var: command_output.stdout
+
+    - name: Initialize parameter value variable
+      set_fact:
+        parameter_value: ""
+
+    - name: Search for parameter value in {{ item }} region
+      shell:  aws cloudformation describe-stacks --stack-name demo-stack-name --region us-east-2 --query 'Stacks[0].Parameters[?ParameterKey==`EFS`].ParameterValue'
+      register: stack_info
+      ignore_errors: yes
+
+    - name: Access the output of the command
+      set_fact:
+        extracted_efs: "{{ stack_info.stdout }}"
+
+
+    - name: Display the extracted value
+      debug:
+        msg: "{{ extracted_efs }}"
+
+    - name: Check if directory exists
+      stat:
+        path: /opt/share
+      register: directory_check
+
+    - name: Create directory if it doesn't exist
+      file:
+        path: /opt/share
+        state: directory
+      when: not directory_check.stat.exists
+
+    - name: copy efs utils script file
+      copy:
+       src:  /home/ansible/efs_log_rotation_scripts/install_efs_util.sh
+       dest: /tmp/
+      when: ansible_facts['distribution'] == 'Ubuntu' or ansible_facts['distribution'] == 'Debian'
+
+    - name: Set execute permission for the script file
+      ansible.builtin.file:
+        path: /tmp/install_efs_util.sh
+        owner: root
+        group: root
+        mode: "u+x"
+      when: ansible_facts['distribution'] == 'Ubuntu' or ansible_facts['distribution'] == 'Debian'
+
+
+    - name: Run efs utils script file
+      command: ./install_efs_util.sh > /var/log/efs_util_script_logs.log 2>&1
+
+      args:
+        chdir: /tmp
+      when: ansible_facts['distribution'] == 'Ubuntu' or ansible_facts['distribution'] == 'Debian'
+
+
+    - name: Mount the EFS file system
+      mount:
+        path: /opt/share
+        src: "{{ extracted_efs[0] }}"  # Replace with your EFS DNS name
+        fstype: efs
+        opts: tls
+        state: mounted
+
+
+    - name: copy s3 script file
+      copy:
+       src:  /home/ansible/efs_log_rotation_scripts/s3_script.sh
+       dest: /tmp/
+
+    - name: Set execute permission for the script file
+      ansible.builtin.file:
+        path: /tmp/s3_script.sh
+        owner: root
+        group: root
+        mode: "u+x"
+
+
+    - name: Run s3 script file
+      command: ./s3_script.sh {{ bucket_name }} > /var/log/s3_script_logs.log 2>&1
+      args:
+        chdir: /tmp
+
+
+    - name: Install s3fs package
+      apt:
+        name: s3fs
+        state: present
+
+    - name: Check if s3 mount directory exists
+      stat:
+        path: /{{ bucket_name }}
+      register: s3_mount_dir
+
+    - name: Create s3 mount directory if it doesn't exist
+      file:
+        path: /{{ bucket_name }}
+        state: directory
+      when: not s3_mount_dir.stat.exists
+
+
+    - name: Mount s3 bucket
+      command: s3fs {{ bucket_name }} /{{ bucket_name }} -o iam_role="EC2_servers" -o url="https://s3-us-east-2.amazonaws.com" -o endpoint=us-east-2
+
+
+
+
+    - name: Check if automation directory exists
+      stat:
+        path: /automation/scripts
+      register: automation_dir
+
+    - name: Create automation directory if it doesn't exist
+      file:
+        path: /automation/scripts
+        state: directory
+      when: not automation_dir.stat.exists
+
+    - name: Create efs_to_s3.sh script file
+      copy:
+        content: |
+          #!/bin/bash
+          find /opt/share/logs -maxdepth 1 -mtime +90 -exec mv {} /{{ bucket_name }}/{{ bucket_name }}/ \;
+        dest: /automation/scripts/efs_to_s3.sh
+        mode: 0755  # Make the script executable

@@ -1,0 +1,18 @@
+---
+    - name: Ensure the physical path for the website exists
+      win_file:
+        path: C:\inetpub\wwwroot\my_new_site
+        state: directory
+
+    - name: Copy the HTML template to the web root
+      template:
+        src: index.html.j2
+        dest: C:\inetpub\wwwroot\my_new_site\index.html
+
+    - name: Create my_new_site
+      community.windows.win_iis_website:
+        name: my_new_site
+        state: started
+        port: '{{ app_port }}'
+        physical_path: C:\inetpub\wwwroot\my_new_site
+        application_pool: DefaultAppPool
