@@ -114,16 +114,6 @@ resource "null_resource" "update_kubeconfig" {
 
 - **Purpose**: Automatically updates your `kubeconfig` to interact with the provisioned EKS cluster using `aws eks update-kubeconfig`.
 
-### Autoscaling Attachment
-
-```hcl
-resource "aws_autoscaling_attachment" "asg_attachment" {
-  autoscaling_group_name = aws_autoscaling_group.asg.id
-  lb_target_group_arn    = aws_lb_target_group.target_group.arn
-}
-```
-
-- **Purpose**: Attaches the Auto Scaling group to the specified Load Balancer target group for load balancing across nodes in the EKS cluster.
 
 ## Variables
 

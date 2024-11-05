@@ -28,63 +28,6 @@ module "eks_autoscaler"{
 
 
 
-
-
-
-
-# provider "helm" {
-#   kubernetes {
-#     host                   = module.eks.eks_this.cluster_endpoint
-#     token                  = module.eks.cluster_name.token
-#     cluster_ca_certificate = base64decode(module.eks.eks_this.cluster_certificate_authority_data)
-#   }
-# }
-
-
-# module "argocd_helm" {
-#   source = "lablabs/eks-argocd/aws"
-
-# cluster_identity_oidc_issuer     = module.eks.oidc_provider
-# cluster_identity_oidc_issuer_arn = module.eks.oidc_provider_arn
-
-#   enabled           = true
-#   argo_enabled      = false
-#   argo_helm_enabled = false
-
-#   self_managed = false
-
-#   helm_release_name = "argocd"
-#   namespace         = "argocd"
-
-#   helm_timeout = 240
-#   helm_wait    = true
-
-# }
-
-# # Please, see README.md and Argo Kubernetes deployment method for implications of using Kubernetes installation method
-# module "argocd_self_managed_kubernetes" {
-#   source = "lablabs/eks-argocd/aws"
-
-#   cluster_identity_oidc_issuer     = module.eks.eks_cluster_identity_oidc_issuer
-#   cluster_identity_oidc_issuer_arn = module.eks.eks_cluster_identity_oidc_issuer_arn
-
-#   enabled           = true
-#   argo_enabled      = true
-#   argo_helm_enabled = false
-
-#   self_managed = true
-
-#   helm_release_name = "argocd-kubernetes"
-#   namespace         = "argocd-kubernetes"
-
-#   argo_sync_policy = {
-#     "automated" : {}
-#     "syncOptions" = ["CreateNamespace=true"]
-#   }
-# }
-
-
-
 data "aws_eks_cluster_auth" "cluster" {
   name = module.eks.cluster_name
 }

@@ -46,7 +46,7 @@ module "eks" {
 
 ### EKS Autoscaler Module
 
-The autoscaler module ensures the cluster can dynamically adjust its capacity based on the current workload:
+The autoscaler module ensures the cluster can dynamically adjust its capacity based on the current workload. It contains the policy for autoscaler. we can deploy the cluster autoscaler use helm charts:
 
 ```hcl
 module "eks_autoscaler" {
