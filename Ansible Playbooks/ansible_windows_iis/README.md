@@ -2,6 +2,10 @@
 
 This repository contains an Ansible playbook for setting up IIS (Internet Information Services) on a Windows server hosted on AWS. It includes tasks to create an IIS website, configure it, and deploy a default HTML page using a Jinja2 template.
 
+# Architecture 
+
+![Resources Architecture](ansible_IIS.jpg)
+
 ## Prerequisites
 
 1. **Ansible**: Ensure you have Ansible installed on your local machine.
@@ -14,6 +18,7 @@ This repository contains an Ansible playbook for setting up IIS (Internet Inform
 The directory structure for the Ansible role is as follows:
 
 ```
+-------------------------------------------------
 .
 └── roles/
     └── sample-site/
@@ -23,6 +28,17 @@ The directory structure for the Ansible role is as follows:
         │   └── index.html.j2
         └── vars/
             └── main.yml (optional for variables)
+-------------------------------------------------
+
+
+└── roles/
+    └── install-iis/
+        └── tasks/
+            └── main.yml
+
+-------------------------------------------------
+
+
 ```
 
 ## Role Overview

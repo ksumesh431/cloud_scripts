@@ -150,7 +150,7 @@
 
 
     - name: Mount s3 bucket
-      command: s3fs {{ bucket_name }} /{{ bucket_name }} -o iam_role="EC2_servers" -o url="https://s3-us-east-2.amazonaws.com" -o endpoint=us-east-2
+      command: s3fs {{ bucket_name }} /{{ bucket_name }} -o iam_role="EC2" -o url="https://s3-us-east-2.amazonaws.com" -o endpoint=us-east-2
 
 
 

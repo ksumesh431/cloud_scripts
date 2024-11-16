@@ -2,6 +2,10 @@
 
 This Terraform configuration sets up an AWS Virtual Private Cloud (VPC) and Elastic Kubernetes Service (EKS) cluster using two separate modules: `vpc` and `eks`. The VPC module provisions a VPC with subnets, and the EKS module deploys a Kubernetes cluster in the provisioned VPC.
 
+# Architecture 
+
+![Resources Architecture](EKS_cloudpose_module.jpg)
+
 ## Prerequisites
 
 - **Terraform**: Ensure that Terraform is installed on your machine. You can download it from [Terraform Downloads](https://www.terraform.io/downloads).

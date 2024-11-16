@@ -2,6 +2,10 @@
 
 This Terraform code provisions an AWS infrastructure for a Kubernetes (K8s) cluster with three EC2 master nodes and worker nodes. Using the Ansible provider, it configures the nodes via `kubeadm` commands.
 
+# Architecture 
+
+![Resources Architecture](HA_kubeadm.jpg)
+
 ## Resources Created
 
 - **VPC**: A Virtual Private Cloud with 3 public and 3 private subnets for EC2 instances.

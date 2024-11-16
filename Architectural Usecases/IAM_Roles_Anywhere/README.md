@@ -4,6 +4,10 @@
 
 This case study explores the implementation of AWS IAM Roles Anywhere to securely provide an on-premises Linux server with access to Amazon S3 storage. By leveraging X.509 certificates issued by a trusted Certificate Authority (CA), the solution generates temporary security credentials on demand. This approach addresses key security concerns and enhances operational efficiency, enabling seamless integration between on-premises workloads and cloud resources.
 
+# Architecture 
+
+![Resources Architecture](IAM_roles_anywhere_usecase.jpg)
+
 ## Problem Statement
 
 Organizations often face challenges when integrating on-premises systems with cloud services due to:

@@ -2,6 +2,10 @@
 
 A Python script that automates the collection, organization, and archival of Tomcat server logs based on date ranges and specified intervals.
 
+# Architecture 
+
+![Resources Architecture](log_archival_python.jpg)
+
 ## Features
 
 - Automatically collects and organizes Tomcat server logs on a weekly basis

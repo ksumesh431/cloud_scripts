@@ -2,6 +2,10 @@
 
 This Terraform configuration provisions an AWS EKS cluster and associated VPC, along with deploying ArgoCD using Helm. It also includes an autoscaling configuration for attaching Auto Scaling groups to load balancer target groups.
 
+# Architecture 
+
+![Resources Architecture](argo_helm_deployment.jpg)
+
 ## Prerequisites
 
 - **Terraform**: Ensure Terraform is installed. You can download it from [Terraform Downloads](https://www.terraform.io/downloads).
