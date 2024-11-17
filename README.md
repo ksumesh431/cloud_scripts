@@ -29,6 +29,36 @@ A collection of Ansible playbooks for various server setups and cloud environmen
 
         2.3 Usage: Enhances provisioning and maintenance in development and production environments.
 
+---
+
+#### 3. Ansible IIS Export and Import
+
+        3.1 Purpose: Automates the export of IIS sites from one Windows server and imports them onto another, facilitating site migration and replication.
+
+        3.2 Structure:
+```plaintext
+.
+└── roles/
+    ├── export_iis/
+    │   ├── tasks/
+    │   │   └── main.yml
+    │   ├── vars/
+    │   │   └── main.yml
+    └── import_iis/
+        ├── tasks/
+        │   └── main.yml
+        ├── vars/
+        │   └── main.yml
+```
+
+        3.3 Usage:
+        - Configure the target server details in `inventory.ini` for both Server 1 (export) and Server 2 (import).
+        - Run the export playbook: `ansible-playbook playbooks/export_iis.yml -i inventory.ini`
+        - Run the import playbook: `ansible-playbook playbooks/import_iis.yml -i inventory.ini`
+
+---
+
+
 <br><br><br><br>
 
 # Architectural Usecases
