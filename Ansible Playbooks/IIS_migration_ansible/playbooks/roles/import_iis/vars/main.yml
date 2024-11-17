@@ -1,0 +1,5 @@
+---
+# Variables specific to the import process
+webdeploy_path: 'C:\Program Files (x86)\IIS\Microsoft Web Deploy V3'
+import_path: 'C:\IISImport\site.zip'
+export_path: 'C:\IISExport\site.zip'

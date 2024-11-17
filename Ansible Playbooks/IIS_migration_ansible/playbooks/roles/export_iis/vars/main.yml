@@ -1,0 +1,5 @@
+---
+# Variables specific to the export process
+webdeploy_path: 'C:\Program Files (x86)\IIS\Microsoft Web Deploy V3'
+export_path: 'C:\IISExport\site.zip'
+

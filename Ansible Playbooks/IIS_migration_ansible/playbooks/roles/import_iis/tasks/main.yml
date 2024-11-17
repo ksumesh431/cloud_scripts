@@ -1,0 +1,38 @@
+---
+- name: Enable IIS and Management Service
+  win_feature:
+    name: Web-Mgmt-Service
+    state: present
+  loop:
+    - Web-Server
+    - Web-Mgmt-Service
+
+- name: Ensure Management Service is running
+  win_service:
+    name: WMSvc
+    state: started
+    start_mode: auto
+
+- name: Install Web Deploy using Chocolatey
+  chocolatey.chocolatey.win_chocolatey:
+    name: webdeploy
+    state: present
+
+- name: Add Web Deploy to PATH (if needed)
+  win_environment:
+    state: present
+    name: PATH
+    value: "{{ webdeploy_path }}"
+    separator: ';'
+
+- name: Copy Exported File to Server 2
+  win_copy:
+    src: "{{ export_path }}"
+    dest: "{{ import_path }}"
+
+- name: Run msdeploy command to import IIS
+  win_command: >
+    & "{{ webdeploy_path }}\msdeploy.exe" 
+    -verb:sync 
+    -source:package={{ import_path }} 
+    -dest:webServer

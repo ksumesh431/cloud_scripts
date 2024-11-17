@@ -1,0 +1,40 @@
+---
+- name: Enable Management Service
+  win_feature:
+    name: Web-Mgmt-Service
+    state: present
+
+- name: Ensure Management Service is running
+  win_service:
+    name: WMSvc
+    state: started
+    start_mode: auto
+
+- name: Install Web Deploy using Chocolatey
+  chocolatey.chocolatey.win_chocolatey:
+    name: webdeploy
+    state: present
+
+- name: Add Web Deploy to PATH (if needed)
+  win_environment:
+    state: present
+    name: PATH
+    value: "{{ webdeploy_path }}"
+    separator: ';'
+
+- name: Run msdeploy command to export IIS
+  win_command: >
+    & "{{ webdeploy_path }}\msdeploy.exe" 
+    -verb:sync 
+    -source:webServer 
+    -dest:package={{ export_path }}
+
+- name: Verify export file exists
+  win_stat:
+    path: "{{ export_path }}"
+  register: export_file
+
+- name: Fail if export file is missing
+  fail:
+    msg: "Export file was not created!"
+  when: not export_file.stat.exists
