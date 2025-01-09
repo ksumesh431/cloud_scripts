@@ -25,7 +25,7 @@ starting_day_of_log_archival = (
 
 # Files starting with "ecs",
 # with one of the patterns and
-# ending with "".server.log" will be matched (ending with ".server.log.{provided_date_string}.gz.server.log.{provided_date_string}.gz" in case of archived logs)
+# ending with "".server.log" will be matched (ending with ".server.log.{provided_date_string}.gz" in case of archived logs)
 patterns_to_match = [
     "-tomcat-",
     "-tomcat_external-",
